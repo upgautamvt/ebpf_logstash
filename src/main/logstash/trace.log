@@ -1,0 +1,7 @@
+Usage: bpftool [OPTIONS] OBJECT { COMMAND | help }
+       bpftool batch file FILE
+       bpftool version
+
+       OBJECT := { prog | map | link | cgroup | perf | net | feature | btf | gen | struct_ops | iter }
+       OPTIONS := { {-j|--json} [{-p|--pretty}] | {-d|--debug} |
+                    {-V|--version} }

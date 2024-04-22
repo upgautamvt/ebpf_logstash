@@ -3,6 +3,8 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/main/xdp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/main/xdp/libbpf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/main/xdp/xdp-tools" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/main/xdp/xdp-tutorial" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/main/xdp/xdp-tutorial/lib/libbpf" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/main/xdp/xdp-tutorial/lib/xdp-tools" vcs="Git" />

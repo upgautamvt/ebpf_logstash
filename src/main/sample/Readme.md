@@ -33,3 +33,6 @@ docker0                <No XDP program loaded!>
 
 //to display all bpf programs currently loaded in the system
 sudo bpftool prog show
+
+
+sudo bpftool prog tracelog show xdp_program_forward

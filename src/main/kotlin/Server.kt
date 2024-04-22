@@ -11,7 +11,7 @@ class Server {
     private val lastPacketIndex = totalPackets - 1
 
     fun startServer() {
-        val serverSocket = ServerSocket(8080) // Listen on port 8080
+        val serverSocket = ServerSocket(9090) // Listen on port 8080
         println("Server started. Waiting for Logstash messages...")
 
         val receivedMessages = mutableListOf<String>()

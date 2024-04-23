@@ -6,7 +6,7 @@ sudo bpftool prog tracelog show simple_xdp_logstash
 
 
 
-
+sudo xdp-loader status
 
 
 

@@ -35,12 +35,12 @@ int xdp_swap(struct xdp_md *ctx) {
             return XDP_DROP;
 
         // Print values before modifications
-        bpf_printk("Source IP: %d.%d.%d.%d, Destination IP: %d.%d.%d.%d\n",
+        /*bpf_printk("Source IP: %d.%d.%d.%d, Destination IP: %d.%d.%d.%d\n",
                      (ip->saddr >> 0) & 0xFF, (ip->saddr >> 8) & 0xFF, (ip->saddr >> 16) & 0xFF, (ip->saddr >> 24) & 0xFF,
                      (ip->daddr >> 0) & 0xFF, (ip->daddr >> 8) & 0xFF, (ip->daddr >> 16) & 0xFF, (ip->daddr >> 24) & 0xFF);
         bpf_printk("Source MAC: %x:%x:%x:%x:%x:%x, Destination MAC: %x:%x:%x:%x:%x:%x\n",
                       eth->h_source[0], eth->h_source[1], eth->h_source[2], eth->h_source[3], eth->h_source[4], eth->h_source[5],
-                      eth->h_dest[0], eth->h_dest[1], eth->h_dest[2], eth->h_dest[3], eth->h_dest[4], eth->h_dest[5]);
+                      eth->h_dest[0], eth->h_dest[1], eth->h_dest[2], eth->h_dest[3], eth->h_dest[4], eth->h_dest[5]);*/
 
 
         ip->daddr = ip->saddr; //assign source address to destination address
@@ -49,12 +49,12 @@ int xdp_swap(struct xdp_md *ctx) {
         memcpy(eth->h_dest, NEW_DEST_MAC, ETH_ALEN);
 
         // Print values after modifications
-        bpf_printk(" After modification, Source IP: %d.%d.%d.%d, Destination IP: %d.%d.%d.%d\n",
+        /*bpf_printk(" After modification, Source IP: %d.%d.%d.%d, Destination IP: %d.%d.%d.%d\n",
                      (ip->saddr >> 0) & 0xFF, (ip->saddr >> 8) & 0xFF, (ip->saddr >> 16) & 0xFF, (ip->saddr >> 24) & 0xFF,
                      (ip->daddr >> 0) & 0xFF, (ip->daddr >> 8) & 0xFF, (ip->daddr >> 16) & 0xFF, (ip->daddr >> 24) & 0xFF);
         bpf_printk("After modification, Source MAC: %x:%x:%x:%x:%x:%x, Destination MAC: %x:%x:%x:%x:%x:%x\n",
                       eth->h_source[0], eth->h_source[1], eth->h_source[2], eth->h_source[3], eth->h_source[4], eth->h_source[5],
-                      eth->h_dest[0], eth->h_dest[1], eth->h_dest[2], eth->h_dest[3], eth->h_dest[4], eth->h_dest[5]);
+                      eth->h_dest[0], eth->h_dest[1], eth->h_dest[2], eth->h_dest[3], eth->h_dest[4], eth->h_dest[5]);*/
 
 
 
